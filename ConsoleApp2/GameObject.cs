@@ -28,6 +28,21 @@ namespace ConsoleApp2
         public GameObject(string name)
         {
            Name = name;
+            m_initialise();
+        }
+        //private method
+        public void m_initialise()
+        {
+            Transform = new Transform();
+        }
+
+        public override string ToString()
+        {
+            string outputstring="";
+            outputstring += $"Name   : {Name}";
+            outputstring += Transform.ToString();
+
+            return outputstring;
         }
     }
 }
